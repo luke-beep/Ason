@@ -194,7 +194,7 @@ public class Ason(AsonFormatting formatting = AsonFormatting.None, char delimite
                                 output.AppendLine($"flt -> \"{node.Name}\": {node.Value}{delimiter}");
                                 break;
                             case AsonNodeType.Bool:
-                                output.AppendLine($"bool -> \"{node.Name}\": {node.Value}{delimiter}");
+                                output.AppendLine($"bool -> \"{node.Name}\": {node.Value.ToString().ToLower()}{delimiter}");
                                 break;
                             case AsonNodeType.Null:
                                 output.AppendLine($"null -> \"{node.Name}\": null{delimiter}");
@@ -213,7 +213,7 @@ public class Ason(AsonFormatting formatting = AsonFormatting.None, char delimite
                                 break;
                             case AsonNodeType.BoolArray:
                                 output.AppendLine(
-                                    $"bool[] -> \"{node.Name}\": [{string.Join(", ", (bool[])node.Value)}]{delimiter}");
+                                    $"bool[] -> \"{node.Name}\": [{string.Join(", ", node.Value.ToString().ToLower())}]{delimiter}");
                                 break;
                             default:
                                 output.AppendLine($"unknown -> \"{node.Name}\": {node.Value}{delimiter}");
@@ -242,7 +242,7 @@ public class Ason(AsonFormatting formatting = AsonFormatting.None, char delimite
                                 output.AppendLine($"flt -> \"{node.Name}\": {node.Value}{delimiter}");
                                 break;
                             case AsonNodeType.Bool:
-                                output.AppendLine($"bool -> \"{node.Name}\": {node.Value}{delimiter}");
+                                output.AppendLine($"bool -> \"{node.Name}\": {node.Value.ToString().ToLower()}{delimiter}");
                                 break;
                             case AsonNodeType.Null:
                                 output.AppendLine($"null -> \"{node.Name}\": null{delimiter}");

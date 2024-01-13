@@ -10,7 +10,6 @@
   <ItemGroup>
     <Folder Include="Ason\Enums\" />
     <Folder Include="Ason\Ast\" />
-    <Folder Include="Ason\Utilities\" />
   </ItemGroup>
 
 </Project>
