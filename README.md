@@ -2,7 +2,7 @@
 
 Ason stands for Azrael's Simple Object Notation. It is a simple data format that is easy to read and write for humans. It is inspired by JSON, but it is not a subset of JSON. It is designed to be a data format that is easy to read and write for humans, and easy to parse for computers.
 
-```json
+```txt
 { "Normal" };
 str -> "String": "String";
 integer -> "Integer": 2;
