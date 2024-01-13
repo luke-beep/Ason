@@ -10,7 +10,7 @@ internal class Program
     // Test case:
     private static void Main(string[] args)
     {
-        var ason = new Ason.Ason(AsonFormatting.Indented);
+        var ason = new Ason.Ason(AsonFormatting.None);
         var asonObject = new AsonObject();
 
         asonObject.Sections.Add(new AsonSection

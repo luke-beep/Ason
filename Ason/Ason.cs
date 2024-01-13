@@ -201,7 +201,7 @@ public class Ason(AsonFormatting formatting = AsonFormatting.None, char delimite
                                 break;
                             case AsonNodeType.StringArray:
                                 output.AppendLine(
-                                    $"str[] -> \"{node.Name}\": [\n\t{string.Join(",\n\t", ((string[])node.Value).Select(v => $"\"{v}\""))}\n]{delimiter}");
+                                    $"str[] -> \"{node.Name}\": [{string.Join(",", ((string[])node.Value).Select(v => $"\"{v}\""))}]{delimiter}");
                                 break;
                             case AsonNodeType.IntArray:
                                 output.AppendLine(
@@ -270,6 +270,8 @@ public class Ason(AsonFormatting formatting = AsonFormatting.None, char delimite
                     }
                 }
                 break;
+            default:
+                throw new AsonException("Formatting entry not found", new Exception("Error"));
         }
         return output.ToString();
     }
