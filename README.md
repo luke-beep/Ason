@@ -5,7 +5,7 @@ Ason stands for Azrael's Simple Object Notation. It is a simple data format that
 ```txt
 { "Normal" };
 str -> "String": "String";
-integer -> "Integer": 2;
+int -> "Integer": 2;
 flt -> "Float": 3.14;
 bool -> "Boolean": True;
 null -> "Null": null;
